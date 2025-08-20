@@ -31,14 +31,26 @@
         </div>
 
         <h3>Total: $<span id="cart-total">0.00</span></h3>
+<form id="checkout-form">
+  <input type="text" id="name" placeholder="Full Name" required /><br>
+  <input type="email" id="email" placeholder="Email Address" required /><br>
+  <input type="text" id="address" placeholder="Shipping Address" required /><br>
+  <input type="text" id="city" placeholder="City" required /><br>
+  <input type="text" id="zip" placeholder="Postal Code" required /><br>
+</form>
 
         <!-- Payment Button -->
-        <button id="pay-btn" class="btn">Pay Now</button>
+        <button class="btn">Pay Now</button>
+        <div id="payment-form" style="display:none;">
+          <label for="card-element">Credit or Debit Card</label>
+          <div id="card-element"></div>
+          <button id="submit-payment" class="btn">Submit Payment</button>
 
         <p id="payment-status"></p>
       </div>
     </section>
   </main>
+  
 
   <!-- Footer -->
   <footer>

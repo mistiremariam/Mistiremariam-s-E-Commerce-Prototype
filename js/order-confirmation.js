@@ -1,17 +1,23 @@
-// Retrieve order details from localStorage
-const cartItems = JSON.parse(localStorage.getItem('orderItems')) || [];
-const total = localStorage.getItem('orderTotal') || 0;
+const items = JSON.parse(localStorage.getItem('orderItems')) || [];
+const total = localStorage.getItem('orderTotal') || '0.00';
 
 const orderSummaryDiv = document.getElementById('order-summary');
-
-cartItems.forEach(item => {
-  const div = document.createElement('div');
-  div.textContent = `${item.name} x ${item.quantity} - $${item.price * item.quantity}`;
-  orderSummaryDiv.appendChild(div);
+items.forEach(item => {
+  const row = document.createElement('div');
+  row.className = 'order-item';
+  row.innerHTML = `
+    <div><strong>${item.name}</strong> × ${item.quantity}</div>
+    <div>$${(item.price * item.quantity).toFixed(2)}</div>
+  `;
+  orderSummaryDiv.appendChild(row);
 });
 
 document.getElementById('order-total').textContent = total;
 
-// Clear localStorage after displaying order
+// clean up
 localStorage.removeItem('orderItems');
 localStorage.removeItem('orderTotal');
+document.getElementById('confirm-order').addEventListener('click', () => {
+  // Handle order confirmation (e.g., send to API)
+  alert('Order confirmed!');
+});

@@ -36,6 +36,7 @@ function renderCart() {
       <div>
         Quantity: <input type="number" min="1" value="${item.quantity}" data-index="${index}" class="quantity-input" />
         <button data-index="${index}" class="remove-btn">Remove</button>
+        
       </div>
       <div>
         Total: $${itemTotal.toFixed(2)}

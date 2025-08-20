@@ -1,0 +1,21 @@
+{
+  "name": "vegetable-ecommerce",
+  "version": "1.0.0",
+  "description": "A prototype e-commerce site for selling vegetables with product listings, shopping cart, and Stripe payment simulation.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "author": "Mistiremariam Girma",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^12.0.0",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Vegetable E-Commerce</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://js.stripe.com/v3/"></script> <!-- Stripe.js -->
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html" class="active">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Checkout Section -->
+  <main>
+    <section class="section checkout">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>Review your order and proceed to payment.</p>
+
+        <div id="cart-summary">
+          <!-- Cart items dynamically listed here -->
+        </div>
+
+        <h3>Total: $<span id="cart-total">0.00</span></h3>
+
+        <!-- Payment Button -->
+        <button id="pay-btn" class="btn">Pay Now</button>
+
+        <p id="payment-status"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Vegetable E-Commerce | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>

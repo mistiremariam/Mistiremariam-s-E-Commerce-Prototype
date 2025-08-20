@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple E-Commerce Prototype</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mistiremariam’s Vegetable E-Commerce Prototype</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>My E-Shop</h1>
-    <div class="cart">
-      🛒 Cart: <span id="cart-count">0</span>
+    <div class="container">
+      <h1>Mistiremariam's Veggie Shop</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Products Section -->
+  <!-- Product Listing -->
   <main>
-    <section class="products">
-      <div class="product" data-id="1" data-name="Product 1" data-price="29.99">
-        <img src="images/product1.jpg" alt="Product 1">
-        <h3>Product 1</h3>
-        <p>Price: $29.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
+    <section class="products container">
+      <h2>Fresh Vegetables</h2>
+      <div class="product-grid">
+        <!-- Product Example -->
+       <div class="product-card">
+         <img src="assets/tomato.jpeg" alt="Tomatoes" />
+         <h3>Tomatoes</h3>
+         <p>$2.50</p>
+         <input type="number" min="1" value="1" />
+         <button class="add-to-cart">Add to Cart</button>
+       </div>
 
-      <div class="product" data-id="2" data-name="Product 2" data-price="49.99">
-        <img src="images/product2.jpg" alt="Product 2">
-        <h3>Product 2</h3>
-        <p>Price: $49.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-      </div>
+       <div class="product-card">
+         <img src="assets/carrot.jpeg" alt="Carrots" />
+         <h3>Carrots</h3>
+         <p>$1.80</p>
+         <input type="number" min="1" value="1" />
+         <button class="add-to-cart">Add to Cart</button>
+       </div>
 
-      <div class="product" data-id="3" data-name="Product 3" data-price="19.99">
-        <img src="images/product3.jpg" alt="Product 3">
-        <h3>Product 3</h3>
-        <p>Price: $19.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+       <div class="product-card">
+         <img src="assets/spinach.webp" alt="Spinach" />
+         <h3>Spinach</h3>
+         <p>$1.20</p>
+         <input type="number" min="1" value="1" />
+         <button class="add-to-cart">Add to Cart</button>
+       </div>
+
+       <div class="product-card">
+         <img src="assets/potato.jpeg" alt="Potatoes" />
+         <h3>Potatoes</h3>
+         <p>$0.90</p>
+         <input type="number" min="1" value="1" />
+         <button class="add-to-cart">Add to Cart</button>
+       </div>
+
+        <!-- Add more products as needed -->
       </div>
     </section>
   </main>
 
-  <script src="js/script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mistiremariam Girma | All Rights Reserved</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>
